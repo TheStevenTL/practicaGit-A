@@ -1,0 +1,104 @@
+﻿<Window x:Class="ATC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATC"
+        mc:Ignorable="d"
+        Title="ATC"
+        Height="450"
+        Width="800">
+
+    <Grid>
+
+        <!-- Columnas del layout -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="217*"/>
+            <ColumnDefinition Width="500*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- PANEL IZQUIERDO -->
+        <Border Grid.Column="0"
+                Background="White"
+                Padding="50" Grid.ColumnSpan="2">
+
+            <!-- 🔧 MARGEN CORREGIDO -->
+            <StackPanel VerticalAlignment="Center" Margin="-30,0,0,0" HorizontalAlignment="Left" Width="270" Height="348">
+
+                <!-- Títulos -->
+             
+
+                <TextBlock Text="Inicio de Sesion"
+                           TextAlignment="Center"
+                           FontSize="18"
+                           Margin="0 10 0 25"
+                           Foreground="#444" Height="32"/>
+
+                <!-- EMAIL -->
+                <TextBlock Text="Email Address"
+                           FontWeight="Bold"
+                           FontSize="12"  Margin="10,0,20,0"
+                           Foreground="#333"/>
+                <TextBox Height="32"
+                           Margin="10,0,20,0"
+                         Background="#F4F4F4"
+                         BorderBrush="#CCC"
+                         Padding="5"/>
+
+                <!-- PASSWORD -->
+                <TextBlock Text="Password"
+                           FontWeight="Bold"
+                           FontSize="12"
+                           Margin="10 15 20 5"
+                           Foreground="#333"/>
+                <PasswordBox Height="32"
+                             Margin="10,0,20,0"
+                             Background="#F4F4F4"
+                             BorderBrush="#CCC"
+                             Padding="5" Password=""/>
+
+                <!-- Remember Me -->
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 15 0 0">
+                    <CheckBox Margin="0 0 5 0"/>
+                    <TextBlock Text="Recordarme"
+                               VerticalAlignment="Center"
+                               Foreground="#444"/>
+                </StackPanel>
+
+                <!-- Botón Login -->
+                <Button Content="Log In"
+                        Height="38"
+                        Margin="0 20 0 15"
+                        Background="#FF119EF7"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        BorderThickness="0"
+                        Cursor="Hand" Width="184"/>
+
+                <!-- No cuenta -->
+                <TextBlock Text="¿No tienes una cuenta?"
+                           TextAlignment="Center"
+                           Foreground="#FF0508CA"
+                           FontSize="12"/>
+
+                <!-- Legal -->
+                <TextBlock Text="© 2025 AdministradorDeTareasYCursos"
+                           FontSize="10"
+                           Foreground="#888"
+                           TextWrapping="Wrap"
+                           Margin="0 20 0 0"/>
+
+            </StackPanel>
+        </Border>
+
+        <!-- PANEL DERECHO -->
+        <Grid Grid.Column="2">
+            <Image Source="Images/LogoProyecto.jpg"
+                   Stretch="Fill"
+                   Margin="0,55,0,32"/>
+        </Grid>
+
+    </Grid>
+</Window>
